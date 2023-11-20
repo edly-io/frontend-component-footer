@@ -46,7 +46,7 @@ class SiteFooter extends React.Component {
     return (
       <footer
         role="contentinfo"
-        className="footer border-top py-3 px-4"
+        className="footer border-top py-3 px-3"
       >
         <div className="container-fluid d-flex align-items-center mb-3">
           <a
@@ -55,7 +55,7 @@ class SiteFooter extends React.Component {
             aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
           >
             <img
-              style={{ maxHeight: 45 }}
+              style={{ maxHeight: 63 }}
               src={logo || config.LOGO_TRADEMARK_URL}
               alt={intl.formatMessage(messages['footer.logo.altText'])}
             />
