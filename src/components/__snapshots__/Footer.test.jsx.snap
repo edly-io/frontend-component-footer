@@ -2,11 +2,11 @@
 
 exports[`<Footer /> renders correctly renders with a language selector 1`] = `
 <footer
-  className="footer d-flex border-top py-3 px-4"
+  className="footer border-top py-3 px-3"
   role="contentinfo"
 >
   <div
-    className="container-fluid d-flex"
+    className="container-fluid d-flex align-items-center mb-3"
   >
     <a
       aria-label="edX Home"
@@ -18,11 +18,27 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         src="https://edx-cdn.org/v3/default/logo-trademark.svg"
         style={
           Object {
-            "maxHeight": 45,
+            "maxHeight": 63,
           }
         }
       />
     </a>
+    <div
+      className="flex-grow-1"
+    />
+    <div>
+      <p
+        className="copyright m-0"
+      >
+        All rights reserved.
+         undefined © 
+        2023
+      </p>
+    </div>
+  </div>
+  <div
+    className="container-fluid d-flex"
+  >
     <div
       className="flex-grow-1"
     />
@@ -70,11 +86,11 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
 
 exports[`<Footer /> renders correctly renders without a language selector 1`] = `
 <footer
-  className="footer d-flex border-top py-3 px-4"
+  className="footer border-top py-3 px-3"
   role="contentinfo"
 >
   <div
-    className="container-fluid d-flex"
+    className="container-fluid d-flex align-items-center mb-3"
   >
     <a
       aria-label="edX Home"
@@ -86,11 +102,27 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         src="https://edx-cdn.org/v3/default/logo-trademark.svg"
         style={
           Object {
-            "maxHeight": 45,
+            "maxHeight": 63,
           }
         }
       />
     </a>
+    <div
+      className="flex-grow-1"
+    />
+    <div>
+      <p
+        className="copyright m-0"
+      >
+        All rights reserved.
+         undefined © 
+        2023
+      </p>
+    </div>
+  </div>
+  <div
+    className="container-fluid d-flex"
+  >
     <div
       className="flex-grow-1"
     />
@@ -100,11 +132,11 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
 
 exports[`<Footer /> renders correctly renders without a language selector in es 1`] = `
 <footer
-  className="footer d-flex border-top py-3 px-4"
+  className="footer border-top py-3 px-3"
   role="contentinfo"
 >
   <div
-    className="container-fluid d-flex"
+    className="container-fluid d-flex align-items-center mb-3"
   >
     <a
       aria-label="edX Home"
@@ -116,11 +148,27 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
         src="https://edx-cdn.org/v3/default/logo-trademark.svg"
         style={
           Object {
-            "maxHeight": 45,
+            "maxHeight": 63,
           }
         }
       />
     </a>
+    <div
+      className="flex-grow-1"
+    />
+    <div>
+      <p
+        className="copyright m-0"
+      >
+        All rights reserved.
+         undefined © 
+        2023
+      </p>
+    </div>
+  </div>
+  <div
+    className="container-fluid d-flex"
+  >
     <div
       className="flex-grow-1"
     />

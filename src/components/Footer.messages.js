@@ -153,8 +153,13 @@ const messages = defineMessages({
   },
   'footer.copyright': {
     id: 'footer.copyright',
-    defaultMessage: 'Copyright © 2023. All rights reserved.',
+    defaultMessage: 'All rights reserved.',
     description: 'copyright text for the footer component',
+  },
+  'footer.copyright.date': {
+    id: 'footer.copyright.date',
+    defaultMessage: '2023',
+    description: 'copyright date for the footer component',
   },
 });
 

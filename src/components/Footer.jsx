@@ -11,6 +11,7 @@ import LanguageSelector from './LanguageSelector';
 ensureConfig([
   'LMS_BASE_URL',
   'LOGO_TRADEMARK_URL',
+  'SITE_NAME',
 ], 'Footer component');
 
 const EVENT_NAMES = {
@@ -61,7 +62,13 @@ class SiteFooter extends React.Component {
             />
           </a>
           <div className="flex-grow-1" />
-          <div><p className="copyright m-0">{intl.formatMessage(messages['footer.copyright'])}</p></div>
+          <div>
+            <p className="copyright m-0">
+              {intl.formatMessage(messages['footer.copyright'])}
+              {` ${config.SITE_NAME} © `}
+              {intl.formatMessage(messages['footer.copyright.date'])}
+            </p>
+          </div>
         </div>
 
         <div className="container-fluid d-flex">
