@@ -30,9 +30,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       <p
         className="copyright m-0"
       >
-        All rights reserved.
-         undefined © 
-        2023
+        All rights reserved.  © 2023
       </p>
     </div>
   </div>
@@ -114,9 +112,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       <p
         className="copyright m-0"
       >
-        All rights reserved.
-         undefined © 
-        2023
+        All rights reserved.  © 2023
       </p>
     </div>
   </div>
@@ -160,9 +156,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       <p
         className="copyright m-0"
       >
-        All rights reserved.
-         undefined © 
-        2023
+        All rights reserved.  © 2023
       </p>
     </div>
   </div>

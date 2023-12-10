@@ -151,15 +151,10 @@ const messages = defineMessages({
     defaultMessage: 'Page Footer',
     description: 'aria-label for the footer component',
   },
-  'footer.copyright': {
-    id: 'footer.copyright',
-    defaultMessage: 'All rights reserved.',
+  'footer.copyright.text': {
+    id: 'footer.copyright.text',
+    defaultMessage: 'All rights reserved. {platformName} © 2023',
     description: 'copyright text for the footer component',
-  },
-  'footer.copyright.date': {
-    id: 'footer.copyright.date',
-    defaultMessage: '2023',
-    description: 'copyright date for the footer component',
   },
 });
 

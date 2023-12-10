@@ -64,9 +64,7 @@ class SiteFooter extends React.Component {
           <div className="flex-grow-1" />
           <div>
             <p className="copyright m-0">
-              {intl.formatMessage(messages['footer.copyright'])}
-              {` ${config.SITE_NAME} © `}
-              {intl.formatMessage(messages['footer.copyright.date'])}
+              {intl.formatMessage(messages['footer.copyright.text'], { platformName: config.SITE_NAME })}
             </p>
           </div>
         </div>
