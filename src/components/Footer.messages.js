@@ -153,7 +153,7 @@ const messages = defineMessages({
   },
   'footer.copyright.text': {
     id: 'footer.copyright.text',
-    defaultMessage: 'All rights reserved. {platformName} © 2023',
+    defaultMessage: 'All rights reserved. SDAIA © 2023',
     description: 'copyright text for the footer component',
   },
 });
