@@ -55,7 +55,7 @@ class SiteFooter extends React.Component {
                 <li>
                   <a href="https://edly.io/tutor/" rel="noreferrer" target="_blank">
                     <Image
-                      src={`${config.LMS_BASE_URL}/static/indigo/images/tutor-logo.png`}
+                      src={`${config.LMS_BASE_URL}/theming/asset/images/tutor-logo.png`}
                       alt={intl.formatMessage(messages['footer.tutorlogo.altText'])}
                       width="57"
                     />
@@ -64,7 +64,7 @@ class SiteFooter extends React.Component {
                 <li>
                   <a href="https://open.edx.org" rel="noreferrer" target="_blank">
                     <Image
-                      src={logo || `${config.LMS_BASE_URL}/static/indigo/images/openedx-logo.png`}
+                      src={logo || `${config.LMS_BASE_URL}/theming/asset/images/openedx-logo.png`}
                       alt={intl.formatMessage(messages['footer.logo.altText'])}
                       width="79"
                     />

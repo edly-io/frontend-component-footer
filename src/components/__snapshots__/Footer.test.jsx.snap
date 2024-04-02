@@ -29,7 +29,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
               <img
                 alt="Runs on Tutor"
                 className=""
-                src="http://localhost:18000/static/indigo/images/tutor-logo.png"
+                src="http://localhost:18000/theming/asset/images/tutor-logo.png"
                 width="57"
               />
             </a>
@@ -43,7 +43,7 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
               <img
                 alt="Powered by Open edX"
                 className=""
-                src="http://localhost:18000/static/indigo/images/openedx-logo.png"
+                src="http://localhost:18000/theming/asset/images/openedx-logo.png"
                 width="79"
               />
             </a>
@@ -127,7 +127,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
               <img
                 alt="Runs on Tutor"
                 className=""
-                src="http://localhost:18000/static/indigo/images/tutor-logo.png"
+                src="http://localhost:18000/theming/asset/images/tutor-logo.png"
                 width="57"
               />
             </a>
@@ -141,7 +141,7 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
               <img
                 alt="Powered by Open edX"
                 className=""
-                src="http://localhost:18000/static/indigo/images/openedx-logo.png"
+                src="http://localhost:18000/theming/asset/images/openedx-logo.png"
                 width="79"
               />
             </a>
@@ -187,7 +187,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
               <img
                 alt="Runs on Tutor"
                 className=""
-                src="http://localhost:18000/static/indigo/images/tutor-logo.png"
+                src="http://localhost:18000/theming/asset/images/tutor-logo.png"
                 width="57"
               />
             </a>
@@ -201,7 +201,7 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
               <img
                 alt="Powered by Open edX"
                 className=""
-                src="http://localhost:18000/static/indigo/images/openedx-logo.png"
+                src="http://localhost:18000/theming/asset/images/openedx-logo.png"
                 width="79"
               />
             </a>
