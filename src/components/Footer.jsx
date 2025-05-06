@@ -53,6 +53,7 @@ class SiteFooter extends React.Component {
             className="d-block"
             href={config.LMS_BASE_URL}
             aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
+            title={intl.formatMessage(messages['footer.logo.ariaLabel'])}
           >
             <img
               style={{ maxHeight: 45 }}
