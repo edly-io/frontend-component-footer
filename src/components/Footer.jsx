@@ -7,6 +7,8 @@ import { AppContext } from '@edx/frontend-platform/react';
 
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
+import tutorLogo from '../assets/images/tutor-logo.png';
+import openEdxLogo from '../assets/images/openedx-logo.png';
 
 ensureConfig([
   'LMS_BASE_URL',
@@ -44,31 +46,70 @@ class SiteFooter extends React.Component {
     const { config } = this.context;
 
     return (
-      <footer
-        role="contentinfo"
-        className="footer d-flex border-top py-3 px-4"
-      >
-        <div className="container-fluid d-flex">
-          <a
-            className="d-block"
-            href={config.LMS_BASE_URL}
-            aria-label={intl.formatMessage(messages['footer.logo.ariaLabel'])}
-          >
-            <img
-              style={{ maxHeight: 45 }}
-              src={logo || config.LOGO_TRADEMARK_URL}
-              alt={intl.formatMessage(messages['footer.logo.altText'])}
-            />
-          </a>
-          <div className="flex-grow-1" />
+      <div className="wrapper wrapper-footer">
+        <footer id="footer" className="tutor-container">
+          <div className="footer-top">
+            <div className="powered-area">
+              <ul className="logo-list">
+                <li>Powered by:</li>
+                <li>
+                  <a
+                    href="https://docs.tutor.edly.io"
+                    rel="noopener"
+                    target="_blank"
+                    onClick={this.externalLinkClickHandler}
+                  >
+                    <img
+                      src={tutorLogo}
+                      alt="Runs on Tutor"
+                      width="57"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://open.edx.org"
+                    rel="noopener"
+                    target="_blank"
+                    onClick={this.externalLinkClickHandler}
+                  >
+                    <img
+                      src={openEdxLogo}
+                      alt="Powered by Open edX"
+                      width="79"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <nav className="nav-colophon" aria-label="About">
+              <ol>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/donate">Donate</a></li>
+                <li><a href="/tos">Terms of Service</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/help">Help</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ol>
+            </nav>
+          </div>
+
+          <span className="copyright-site">
+            {`Copyrights ©${new Date().getFullYear()}. All Rights Reserved.`}
+          </span>
+
           {showLanguageSelector && (
-            <LanguageSelector
-              options={supportedLanguages}
-              onSubmit={onLanguageSelected}
-            />
+            <div className="language-selector-footer">
+              <LanguageSelector
+                options={supportedLanguages}
+                onSubmit={onLanguageSelected}
+              />
+            </div>
           )}
-        </div>
-      </footer>
+        </footer>
+      </div>
     );
   }
 }
