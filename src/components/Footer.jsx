@@ -4,6 +4,7 @@ import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
+import { getConfig } from '@edx/frontend-platform';
 
 import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
@@ -18,6 +19,7 @@ ensureConfig([
 const EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link',
 };
+const LMS_BASE_URL = getConfig().LMS_BASE_URL;
 
 class SiteFooter extends React.Component {
   constructor(props) {
@@ -85,13 +87,13 @@ class SiteFooter extends React.Component {
 
             <nav className="nav-colophon" aria-label="About">
               <ol>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/donate">Donate</a></li>
-                <li><a href="/tos">Terms of Service</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/help">Help</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li><a href={`${LMS_BASE_URL}/about`}>About Us</a></li>
+                <li><a href={`${LMS_BASE_URL}/blog`}>Blog</a></li>
+                <li><a href={`${LMS_BASE_URL}/donate`}>Donate</a></li>
+                <li><a href={`${LMS_BASE_URL}/tos`}>Terms of Service</a></li>
+                <li><a href={`${LMS_BASE_URL}/privacy`}>Privacy Policy</a></li>
+                <li><a href={`${LMS_BASE_URL}/help`}>Help</a></li>
+                <li><a href={`${LMS_BASE_URL}/contact`}>Contact Us</a></li>
               </ol>
             </nav>
           </div>
