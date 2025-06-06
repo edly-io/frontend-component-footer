@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
+import { injectIntl } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
 import { getConfig } from '@edx/frontend-platform';
 
-import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
 import tutorLogo from '../assets/images/tutor-logo.png';
 import openEdxLogo from '../assets/images/openedx-logo.png';
@@ -19,7 +18,7 @@ ensureConfig([
 const EVENT_NAMES = {
   FOOTER_LINK: 'edx.bi.footer.link',
 };
-const LMS_BASE_URL = getConfig().LMS_BASE_URL;
+const LMS_BASE_URL = getConfig()?.LMS_BASE_URL;
 
 class SiteFooter extends React.Component {
   constructor(props) {
@@ -41,11 +40,8 @@ class SiteFooter extends React.Component {
     const {
       supportedLanguages,
       onLanguageSelected,
-      logo,
-      intl,
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
-    const { config } = this.context;
 
     return (
       <div className="wrapper wrapper-footer">
@@ -57,7 +53,7 @@ class SiteFooter extends React.Component {
                 <li>
                   <a
                     href="https://docs.tutor.edly.io"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     target="_blank"
                     onClick={this.externalLinkClickHandler}
                   >
@@ -71,7 +67,7 @@ class SiteFooter extends React.Component {
                 <li>
                   <a
                     href="https://open.edx.org"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     target="_blank"
                     onClick={this.externalLinkClickHandler}
                   >
@@ -119,8 +115,6 @@ class SiteFooter extends React.Component {
 SiteFooter.contextType = AppContext;
 
 SiteFooter.propTypes = {
-  intl: intlShape.isRequired,
-  logo: PropTypes.string,
   onLanguageSelected: PropTypes.func,
   supportedLanguages: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
@@ -129,7 +123,6 @@ SiteFooter.propTypes = {
 };
 
 SiteFooter.defaultProps = {
-  logo: undefined,
   onLanguageSelected: undefined,
   supportedLanguages: [],
 };
