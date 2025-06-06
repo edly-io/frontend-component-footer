@@ -143,7 +143,7 @@ const messages = defineMessages({
   },
   'footer.tutorLogo.altText': {
     id: 'footer.tutorLogo.altText',
-    defaultMessage: 'Runs on Tutor ok',
+    defaultMessage: 'Runs on Tutor',
     description: 'alt text for the tutor logo in footer.',
   },
   'footer.openEdxLogo.altText': {
