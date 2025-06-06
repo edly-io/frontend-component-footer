@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl } from '@edx/frontend-platform/i18n';
+import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { sendTrackEvent } from '@edx/frontend-platform/analytics';
 import { ensureConfig } from '@edx/frontend-platform/config';
 import { AppContext } from '@edx/frontend-platform/react';
 
+import messages from './Footer.messages';
 import LanguageSelector from './LanguageSelector';
 import tutorLogo from '../assets/images/tutor-logo.png';
 import openEdxLogo from '../assets/images/openedx-logo.png';
@@ -38,6 +39,7 @@ class SiteFooter extends React.Component {
     const {
       supportedLanguages,
       onLanguageSelected,
+      intl,
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const { config } = this.context;
@@ -58,7 +60,7 @@ class SiteFooter extends React.Component {
                   >
                     <img
                       src={tutorLogo}
-                      alt="Runs on Tutor"
+                      alt={intl.formatMessage(messages['footer.tutorLogo.altText'])}
                       width="57"
                     />
                   </a>
@@ -72,7 +74,7 @@ class SiteFooter extends React.Component {
                   >
                     <img
                       src={openEdxLogo}
-                      alt="Powered by Open edX"
+                      alt={intl.formatMessage(messages['footer.openEdxLogo.altText'])}
                       width="79"
                     />
                   </a>
@@ -114,6 +116,7 @@ class SiteFooter extends React.Component {
 SiteFooter.contextType = AppContext;
 
 SiteFooter.propTypes = {
+  intl: intlShape.isRequired,
   onLanguageSelected: PropTypes.func,
   supportedLanguages: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,

@@ -141,6 +141,16 @@ const messages = defineMessages({
     defaultMessage: 'Powered by Open edX',
     description: 'alt text for the footer logo.',
   },
+  'footer.tutorLogo.altText': {
+    id: 'footer.tutorLogo.altText',
+    defaultMessage: 'Runs on Tutor ok',
+    description: 'alt text for the tutor logo in footer.',
+  },
+  'footer.openEdxLogo.altText': {
+    id: 'footer.openEdxLogo.altText',
+    defaultMessage: 'Powered by Open edX',
+    description: 'alt text for the openedx logo in footer.',
+  },
   'footer.logo.ariaLabel': {
     id: 'footer.logo.ariaLabel',
     defaultMessage: 'edX Home',
