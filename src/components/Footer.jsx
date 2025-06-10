@@ -37,6 +37,7 @@ class SiteFooter extends React.Component {
     const {
       supportedLanguages,
       onLanguageSelected,
+      logo,
       intl,
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
@@ -105,6 +106,7 @@ SiteFooter.contextType = AppContext;
 
 SiteFooter.propTypes = {
   intl: intlShape.isRequired,
+  logo: PropTypes.string,
   onLanguageSelected: PropTypes.func,
   supportedLanguages: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
@@ -113,6 +115,7 @@ SiteFooter.propTypes = {
 };
 
 SiteFooter.defaultProps = {
+  logo: undefined,
   onLanguageSelected: undefined,
   supportedLanguages: [],
 };
