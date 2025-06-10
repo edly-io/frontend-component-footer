@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import _ from 'lodash';
-import { intlShape, injectIntl, FormattedMessage } from '@edx/frontend-platform/i18n';
+import { useIntl, FormattedMessage } from '@edx/frontend-platform/i18n';
 import { ensureConfig } from '@edx/frontend-platform';
 import { AppContext } from '@edx/frontend-platform/react';
 import {
@@ -10,8 +10,11 @@ import {
   Hyperlink,
   Image,
   TransitionReplace,
-} from '@edx/paragon';
-import { ExpandLess, ExpandMore, Help } from '@edx/paragon/icons';
+} from '@openedx/paragon';
+import { ExpandLess, ExpandMore, Help } from '@openedx/paragon/icons';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+
 import messages from './messages';
 
 ensureConfig([
@@ -22,15 +25,17 @@ ensureConfig([
   'SUPPORT_EMAIL',
   'SITE_NAME',
   'STUDIO_BASE_URL',
-  'SHOW_ACCESSIBILITY_PAGE',
+  'ENABLE_ACCESSIBILITY_PAGE',
 ], 'Studio Footer component');
 
 const StudioFooter = ({
-  // injected
-  intl,
+  containerProps,
 }) => {
+  const intl = useIntl();
   const [isOpen, setIsOpen] = useState(false);
   const { config } = useContext(AppContext);
+
+  const { containerClassName, ...restContainerProps } = containerProps || {};
 
   return (
     <>
@@ -49,7 +54,11 @@ const StudioFooter = ({
         </Button>
         <div className="col border-top ml-2" />
       </div>
-      <Container size="xl" className="px-4">
+      <Container
+        size="xl"
+        className={classNames('px-4', containerClassName)}
+        {...restContainerProps}
+      >
         <TransitionReplace>
           {isOpen ? (
             <ActionRow key="help-link-button-row" className="py-4" data-testid="helpButtonRow">
@@ -94,7 +103,7 @@ const StudioFooter = ({
           ) : null}
         </TransitionReplace>
         <ActionRow className="pt-3 m-0 x-small">
-          © {new Date().getFullYear()} <Hyperlink destination={config.MARKETING_BASE_URL} target="_blank" className="ml-2">{config.SITE_NAME}</Hyperlink>
+          © {new Date().getFullYear()} <Hyperlink destination={config.MARKETING_SITE_BASE_URL} target="_blank" className="ml-2">{config.SITE_NAME}</Hyperlink>
           <ActionRow.Spacer />
           {!_.isEmpty(config.TERMS_OF_SERVICE_URL) && (
             <Hyperlink destination={config.TERMS_OF_SERVICE_URL} data-testid="termsOfService">
@@ -105,7 +114,7 @@ const StudioFooter = ({
               {intl.formatMessage(messages.privacyPolicyLinkLabel)}
             </Hyperlink>
           )}
-          {config.SHOW_ACCESSIBILITY_PAGE === 'true' && (
+          {config.ENABLE_ACCESSIBILITY_PAGE === 'true' && (
             <Hyperlink
               destination={`${config.STUDIO_BASE_URL}/accessibility`}
               data-testid="accessibilityRequest"
@@ -139,8 +148,11 @@ const StudioFooter = ({
 };
 
 StudioFooter.propTypes = {
-  // injected
-  intl: intlShape.isRequired,
+  containerProps: PropTypes.shape(Container.propTypes),
 };
 
-export default injectIntl(StudioFooter);
+StudioFooter.defaultProps = {
+  containerProps: {},
+};
+
+export default StudioFooter;

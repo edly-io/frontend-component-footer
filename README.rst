@@ -8,6 +8,8 @@ frontend-component-footer
 Purpose
 ********
 
+- Updated  dependencies for sumac with openedx-footer master
+
 A generic footer for Open edX micro-frontend applications.  It includes a logo and an optional language selector dropdown.
 
 ***************
@@ -93,6 +95,12 @@ This library has the following exports:
   language from its dropdown.
 * supportedLanguages: An array of objects representing available languages.  See example below for object shape.
 
+Plugin
+======
+The footer can be replaced using using `Frontend Plugin Framework <https://github.com/openedx/frontend-plugin-framework>`_.
+
+Information on how to utilize the ``FooterSlot`` component to do so is available in the `frontend-slot-footer repository <https://github.com/openedx/frontend-slot-footer/>`_.
+
 Examples
 ========
 
@@ -112,6 +120,8 @@ Component Usage Example::
 
 * `An example of minimal component and messages usage. <https://github.com/openedx/frontend-template-application/blob/3355bb3a96232390e9056f35b06ffa8f105ed7ca/src/index.jsx#L23>`_
 * `An example of SCSS file usage. <https://github.com/openedx/frontend-template-application/blob/3cd5485bf387b8c479baf6b02bf59e3061dc3465/src/index.scss#L9>`_
+
+
 
 Development
 ===========
