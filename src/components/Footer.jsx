@@ -86,12 +86,10 @@ class SiteFooter extends React.Component {
           </nav>
           <span className="copyright-site">{intl.formatMessage(messages['footer.copyright.text'])}</span>
           {showLanguageSelector && (
-            <div className="language-selector-footer">
-              <LanguageSelector
-                options={supportedLanguages}
-                onSubmit={onLanguageSelected}
-              />
-            </div>
+            <LanguageSelector
+              options={supportedLanguages}
+              onSubmit={onLanguageSelected}
+            />
           )}
         </footer>
       </div>
