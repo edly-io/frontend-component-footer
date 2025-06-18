@@ -71,18 +71,6 @@ class SiteFooter extends React.Component {
                 </li>
               </ul>
             </div>
-
-            <nav className="nav-colophon" aria-label="About">
-              <ol>
-                <li><a href={`${config.LMS_BASE_URL}/about`}>About Us</a></li>
-                <li><a href={`${config.LMS_BASE_URL}/blog`}>Blog</a></li>
-                <li><a href={`${config.LMS_BASE_URL}/donate`}>Donate</a></li>
-                <li><a href={`${config.LMS_BASE_URL}/tos`}>Terms of Service</a></li>
-                <li><a href={`${config.LMS_BASE_URL}/privacy`}>Privacy Policy</a></li>
-                <li><a href={`${config.LMS_BASE_URL}/help`}>Help</a></li>
-                <li><a href={`${config.LMS_BASE_URL}/contact`}>Contact Us</a></li>
-              </ol>
-            </nav>
           </div>
           <nav className="nav-colophon">
               <ol>
