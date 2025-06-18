@@ -71,19 +71,16 @@ class SiteFooter extends React.Component {
                 </li>
               </ul>
             </div>
+            <nav className="nav-colophon">
+                <ol>
+                  {indigoFooterNavLinks.map((link, index) => (
+                    <li key={index}>
+                      <a href={`${config.LMS_BASE_URL}${link.url}`}>{link.title}</a>
+                    </li>
+                  ))}
+                </ol>
+            </nav>
           </div>
-          <nav className="nav-colophon">
-              <ol>
-                <li key={index}>
-                    <a href={`${config.LMS_BASE_URL}${link.url}`}>zubair</a>
-                </li>
-                {indigoFooterNavLinks.map((link, index) => (
-                  <li key={index}>
-                    <a href={`${config.LMS_BASE_URL}${link.url}`}>{link.title}</a>
-                  </li>
-                ))}
-              </ol>
-          </nav>
           <span className="copyright-site">{intl.formatMessage(messages['footer.copyright.text'])}</span>
           {showLanguageSelector && (
             <LanguageSelector

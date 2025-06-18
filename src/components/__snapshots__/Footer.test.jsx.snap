@@ -49,60 +49,9 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
         </ul>
       </div>
       <nav
-        aria-label="About"
         className="nav-colophon"
       >
-        <ol>
-          <li>
-            <a
-              href="http://localhost:18000/about"
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/blog"
-            >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/donate"
-            >
-              Donate
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/tos"
-            >
-              Terms of Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/privacy"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/help"
-            >
-              Help
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/contact"
-            >
-              Contact Us
-            </a>
-          </li>
-        </ol>
+        <ol />
       </nav>
     </div>
     <span
@@ -110,49 +59,45 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
     >
       Copyrights ©2025. All Rights Reserved.
     </span>
-    <div
-      className="language-selector-footer"
+    <form
+      className="form-inline"
+      onSubmit={[Function]}
     >
-      <form
-        className="form-inline"
-        onSubmit={[Function]}
+      <div
+        className="form-group"
       >
-        <div
-          className="form-group"
+        <label
+          className="d-inline-block m-0"
+          htmlFor="site-footer-language-select"
         >
-          <label
-            className="d-inline-block m-0"
-            htmlFor="site-footer-language-select"
+          Choose Language
+        </label>
+        <select
+          className="form-control-sm mx-2"
+          defaultValue="en"
+          id="site-footer-language-select"
+          name="site-footer-language-select"
+        >
+          <option
+            value="en"
           >
-            Choose Language
-          </label>
-          <select
-            className="form-control-sm mx-2"
-            defaultValue="en"
-            id="site-footer-language-select"
-            name="site-footer-language-select"
+            English
+          </option>
+          <option
+            value="es"
           >
-            <option
-              value="en"
-            >
-              English
-            </option>
-            <option
-              value="es"
-            >
-              Español
-            </option>
-          </select>
-          <button
-            className="btn btn-outline-primary btn-sm"
-            data-testid="site-footer-submit-btn"
-            type="submit"
-          >
-            Apply
-          </button>
-        </div>
-      </form>
-    </div>
+            Español
+          </option>
+        </select>
+        <button
+          className="btn btn-outline-primary btn-sm"
+          data-testid="site-footer-submit-btn"
+          type="submit"
+        >
+          Apply
+        </button>
+      </div>
+    </form>
   </footer>
 </div>
 `;
@@ -206,60 +151,9 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
         </ul>
       </div>
       <nav
-        aria-label="About"
         className="nav-colophon"
       >
-        <ol>
-          <li>
-            <a
-              href="http://localhost:18000/about"
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/blog"
-            >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/donate"
-            >
-              Donate
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/tos"
-            >
-              Terms of Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/privacy"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/help"
-            >
-              Help
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/contact"
-            >
-              Contact Us
-            </a>
-          </li>
-        </ol>
+        <ol />
       </nav>
     </div>
     <span
@@ -320,60 +214,9 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
         </ul>
       </div>
       <nav
-        aria-label="About"
         className="nav-colophon"
       >
-        <ol>
-          <li>
-            <a
-              href="http://localhost:18000/about"
-            >
-              About Us
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/blog"
-            >
-              Blog
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/donate"
-            >
-              Donate
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/tos"
-            >
-              Terms of Service
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/privacy"
-            >
-              Privacy Policy
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/help"
-            >
-              Help
-            </a>
-          </li>
-          <li>
-            <a
-              href="http://localhost:18000/contact"
-            >
-              Contact Us
-            </a>
-          </li>
-        </ol>
+        <ol />
       </nav>
     </div>
     <span
