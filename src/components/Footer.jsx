@@ -42,6 +42,7 @@ class SiteFooter extends React.Component {
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const config = getConfig();
+    const indigoFooterNavLinks = config.INDIGO_FOOTER_NAV_LINK || [];
 
     return (
       <div className="wrapper wrapper-footer">
@@ -83,11 +84,19 @@ class SiteFooter extends React.Component {
               </ol>
             </nav>
           </div>
-
-          <span className="copyright-site">
-            {intl.formatMessage(messages['footer.copyright.text'])}
-          </span>
-
+          <nav className="nav-colophon">
+              <ol>
+                <li key={index}>
+                    <a href={`${config.LMS_BASE_URL}${link.url}`}>zubair</a>
+                </li>
+                {indigoFooterNavLinks.map((link, index) => (
+                  <li key={index}>
+                    <a href={`${config.LMS_BASE_URL}${link.url}`}>{link.title}</a>
+                  </li>
+                ))}
+              </ol>
+          </nav>
+          <span className="copyright-site">{intl.formatMessage(messages['footer.copyright.text'])}</span>
           {showLanguageSelector && (
             <div className="language-selector-footer">
               <LanguageSelector
