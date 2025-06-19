@@ -42,7 +42,7 @@ class SiteFooter extends React.Component {
     } = this.props;
     const showLanguageSelector = supportedLanguages.length > 0 && onLanguageSelected;
     const config = getConfig();
-    const indigoFooterNavLinks = config.INDIGO_FOOTER_NAV_LINK || [];
+    const indigoFooterNavLinks = config.INDIGO_FOOTER_NAV_LINKS || [];
 
     return (
       <div className="wrapper wrapper-footer">
