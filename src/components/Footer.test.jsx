@@ -7,6 +7,17 @@ import { AppContext } from '@edx/frontend-platform/react';
 
 import Footer from './Footer';
 
+jest.mock('@edx/frontend-platform', () => ({
+  ...jest.requireActual('@edx/frontend-platform'),
+  getConfig: () => ({
+    LMS_BASE_URL: process.env.LMS_BASE_URL,
+    INDIGO_FOOTER_NAV_LINKS: [
+      { title: 'About Us', url: '/about' },
+      { title: 'Contact', url: '/contact' },
+    ],
+  }),
+}));
+
 const FooterWithContext = ({ locale = 'es' }) => {
   const contextValue = useMemo(() => ({
     authenticatedUser: null,

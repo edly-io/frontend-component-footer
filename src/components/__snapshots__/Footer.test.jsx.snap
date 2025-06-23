@@ -51,7 +51,22 @@ exports[`<Footer /> renders correctly renders with a language selector 1`] = `
       <nav
         className="nav-colophon"
       >
-        <ol />
+        <ol>
+          <li>
+            <a
+              href="http://localhost:18000/about"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://localhost:18000/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ol>
       </nav>
     </div>
     <span
@@ -153,7 +168,22 @@ exports[`<Footer /> renders correctly renders without a language selector 1`] = 
       <nav
         className="nav-colophon"
       >
-        <ol />
+        <ol>
+          <li>
+            <a
+              href="http://localhost:18000/about"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://localhost:18000/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ol>
       </nav>
     </div>
     <span
@@ -216,7 +246,22 @@ exports[`<Footer /> renders correctly renders without a language selector in es 
       <nav
         className="nav-colophon"
       >
-        <ol />
+        <ol>
+          <li>
+            <a
+              href="http://localhost:18000/about"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="http://localhost:18000/contact"
+            >
+              Contact
+            </a>
+          </li>
+        </ol>
       </nav>
     </div>
     <span

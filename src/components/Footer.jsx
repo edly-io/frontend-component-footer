@@ -11,6 +11,7 @@ import LanguageSelector from './LanguageSelector';
 ensureConfig([
   'LMS_BASE_URL',
   'LOGO_TRADEMARK_URL',
+  'INDIGO_FOOTER_NAV_LINKS',
 ], 'Footer component');
 
 const EVENT_NAMES = {
